@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Update Subject Listing</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</h:head>
+<h:body>
+	<div class="container">
+  	<div class="jumbotron">
+	<h1>Update Listing</h1>
+	<h:form>
+		<br />
+		<h:messages styleClass="errorMessage" globalOnly="true" />
+		<br />
+		<h:message for="id" styleClass="errorMessage" />
+		<br />
+      	Subject ID:: <h:inputText value="#{subject.id}" id="id"
+			p:placeholder=""
+			required="true" requiredMessage="Subject ID is needed" />
+		<br />
+		<br />
+		<h:message styleClass="errorMessage" for="name"/> 
+		<br />
+      	Subject Name: <h:inputText value="#{subject.name}" id="name"
+			p:placeholder="" />
+		<br />
+		<br />
+		<h:commandButton value="Update"
+			action="#{subjectController.updateSubject(subject)}" />
+		<br />
+		<br />
+		<a href="Index.xhtml">Home</a> <a href="subject_listing.xhtml">  Subject Listings</a> 
+	</h:form>
+	</div>
+	</div>
+</h:body>
+</html>
