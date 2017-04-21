@@ -23,7 +23,7 @@ public class DAO
 	// Get info on Subject
 	public ArrayList<Subject> getSubjectDetails() throws Exception 
 	{
-		ArrayList<Subject> subject = new ArrayList<>();
+		ArrayList<Subject> subjects = new ArrayList<>();
 		Connection conn = mysqlDS.getConnection();
 		PreparedStatement myStmt = conn.prepareStatement("select * from subjects");
 		ResultSet rs = myStmt.executeQuery();
@@ -31,26 +31,26 @@ public class DAO
 		{
 			String id = rs.getString("id");
 			String name = rs.getString("name");
-			subject.add(new Subject(id, name));
+			subjects.add(new Subject(id, name));
 		}
-		return subject;
+		return subjects;
 	}
 	// Update Subject
-	public void updateSubject(Subject subject) throws SQLException
+	public void updateSubject(Subject subjects) throws SQLException
 	{
 		Connection conn = mysqlDS.getConnection();
 		PreparedStatement myStmt = conn.prepareStatement("update subjects set id=?, name=?");
-		myStmt.setString(1, subject.getId());
-		myStmt.setString(2, subject.getName());		
+		myStmt.setString(1, subjects.getId());
+		myStmt.setString(2, subjects.getName());		
 		myStmt.executeUpdate();
 	}
 	//add a Manufacturer
-	public void addSubject(Subject subject) throws SQLException
+	public void addSubject(Subject subjects) throws SQLException
 	{
 		Connection conn = mysqlDS.getConnection();
 		PreparedStatement myStmt = conn.prepareStatement("insert into topics(id,name) values(?,?)");
-		myStmt.setString(1, subject.getId());
-		myStmt.setString(2, subject.getName());
+		myStmt.setString(1, subjects.getId());
+		myStmt.setString(2, subjects.getName());
 		myStmt.executeUpdate();
 	}
 	

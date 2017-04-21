@@ -10,7 +10,7 @@ import javax.faces.context.FacesContext;
 @ViewScoped
 public class SubjectController 
 {
-	private ArrayList<Subject> subject;
+	private ArrayList<Subject> subjects;
 	DAO dao;
 	
 	public SubjectController() throws Exception
@@ -27,19 +27,19 @@ public class SubjectController
 	
 	public ArrayList<Subject> getSubjects() 
 	{
-		return subject;
+		return subjects;
 	}
 
 	public void loadSubjects() throws Exception 
 	{
-		subject = dao.getSubjectDetails();
+		subjects = dao.getSubjectDetails();
 	}
 	
-	public String updateSubject(Subject subject) throws Exception 
+	public String updateSubject(Subject subjects) throws Exception 
 	{
 		try 
 		{
-			dao.updateSubject(subject);
+			dao.updateSubject(subjects);
 			return "subjects";
 		}
 		catch (Exception e) 
@@ -50,11 +50,11 @@ public class SubjectController
 		}
 	}
 	
-	public String addSubject(Subject subject) throws Exception
+	public String addSubject(Subject subjects) throws Exception
 	{
 		try
 		{
-			dao.addSubject(subject);
+			dao.addSubject(subjects);
 			return "subjects";
 		}
 		catch (Exception e) 

@@ -13,36 +13,38 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </h:head>
 <h:body>
-
 <div class="container">
   <div class="jumbotron">
-		<h3>Add your Notes here.</h3>
+  <h1>Add Notes</h1>
+  <BR />
+  <h4>How to add your notes, firstly create a Topic ID and assign it to the correct Subject ID. Now once you have the subject ID and Topic ID created, you can now add your notes to the system. Re-Enter the Topic ID from above.</h4>
 	<h:form>
-		<h4>How to add your notes, firstly create a Topic ID and assign it to the correct Subject ID. Now once you have the subject ID and Topic ID created, you can now add your notes to the system. Re-Enter the Topic ID from above.</h4>
 		<h:messages styleClass="errorMessage" globalOnly="true" />
 		<h:message for="subID" styleClass="errorMessage" />
 		<br />
-      	Subject ID: <h:inputText value="#{subTopics.subID}" id="subID" p:placeholder="" required="true" requiredMessage="subject id is needed, please try again" />
+      	Subject ID <h:inputText class="form-control form-control-lg" value="#{subTopics.subID}" id="subID" p:placeholder="" required="true" requiredMessage="subject id is needed, please try again" />
 		<br />
 		<h:message for="topID" styleClass="errorMessage" />
 		<br />
-      	Topic ID: <h:inputText value="#{subTopics.topID}" id="topID" p:placeholder="" required="true" requiredMessage="Topic ID is needed" />
+      	Topic ID <h:inputText class="form-control form-control-lg" value="#{subTopics.topID}" id="topID" p:placeholder="" required="true" requiredMessage="Topic ID is needed" />
 		<br />
 		<br />
 		<h:message for="topicID" styleClass="errorMessage" />
 		<br />
-      	Topic ID: <h:inputText value="#{topics.topicID}" id="topicID" p:placeholder="" required="true" requiredMessage="Topic ID is needed" />
+      	Topic ID <h:inputText class="form-control form-control-lg" value="#{topics.topicID}" id="topicID" p:placeholder="" required="true" requiredMessage="Topic ID is needed" />
 		<br />
 		<h:message  for="topicName"/> 
 		<br />
-      	Topic Name: <h:inputText value="#{topics.topicName}" id="topicName" p:placeholder=""/>
+      	Topic Name <h:inputText class="form-control form-control-lg" value="#{topics.topicName}" id="topicName" p:placeholder=""/>
 		<br />
 		<h:message for="details"/> 
 		<br />
-		Details: <h:inputTextarea value="#{topics.details}" id="details"  cols="50" rows="10" p:placeholder=""/>
+		Details <h:inputTextarea class="form-control form-control-lg" value="#{topics.details}" id="details"  cols="50" rows="10" p:placeholder=""/>
 		<br />
-		<h:commandButton value="Click me first" color="blue" action="#{topicController.addTopic(topics)}" />
-		<h:commandButton value="Click me seconds" color="green" action="#{subTopicController.addSubTopics(subTopics)}" />
+		<h:commandButton value="Click me first" action="#{topicController.addTopic(topics)}">
+			<span class="glyphicon glyphicon-search"/>
+		</h:commandButton>
+		<h:commandButton value="Click me seconds" action="#{subTopicController.addSubTopics(subTopics)}" />
 		<br />
 		<br />
 		<a href="Index.xhtml">Home</a>

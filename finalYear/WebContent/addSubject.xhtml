@@ -22,15 +22,14 @@
 		<br />
 		<h:message for="id" styleClass="errorMessage" />
 		<br />
-      	Subject ID: <h:inputText value="#{subject.id}" id="id" p:placeholder="" required="true" requiredMessage="Subject ID is needed, please enter here" />
-		<br />
+      	Subject ID: <h:inputText value="#{subjects.id}" class="form-control form-control-lg" id="id" p:placeholder="" required="true" requiredMessage="Subject ID is needed, please enter here" />
 		<br />
 		<h:message for="name"/> 
 		<br />
-      	Subject Name: <h:inputText value="#{subject.name}" id="name" p:placeholder="" />
+      	Subject Name: <h:inputText value="#{subjects.name}" class="form-control form-control-lg" id="name" p:placeholder="" />
 		<br />
 		<br />
-		<h:commandButton value="Add Subject" action="#{subjectController.addSubject(subject)}" />
+		<h:commandButton value="Add Subject" action="#{subjectController.addSubject(subjects)}" />
 		<br />
 		<br />
 		<a href="Index.xhtml">Home</a>
