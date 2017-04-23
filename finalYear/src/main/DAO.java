@@ -36,21 +36,7 @@ public class DAO
 		}
 		return subjects;
 	}
-	
-	//add a subject
-	/*public void addS(Topics topic) throws SQLException
-	{
-		Connection conn = mysqlDS.getConnection();
-		System.out.println(topic.toString());
-		//PreparedStatement myStmt = conn.prepareStatement("Insert into subject_topics values(?,?), topics values(?,?,?)");
-		PreparedStatement myStmt = conn.prepareStatement("insert into topics(topicID,topicName,details) values(?,?,?)");
-		myStmt.setString(1, topic.getTopicID());
-		myStmt.setString(2, topic.getTopicName());
-		myStmt.setString(3, topic.getDetails());
-		//System.out.println(myStmt);
-		myStmt.executeUpdate();
-	}*/
-	
+		
 	//view topics\notes other
 	public ArrayList<Topics> getTopicDetails() throws Exception
 	{
@@ -132,8 +118,10 @@ public class DAO
 	{
 		Connection conn = mysqlDS.getConnection();
 		PreparedStatement myStmt = conn.prepareStatement("Insert into subjects values (?,?)");
+		System.out.println(subjects.toString());
 		myStmt.setString(1, subjects.getId());
 		myStmt.setString(2, subjects.getName());
+		System.out.println(myStmt);
 		myStmt.executeUpdate();		
 	}
 
@@ -159,6 +147,15 @@ public class DAO
 			findSub.add(new FindAll(Sub_Name, Topic_ID, Topic_Name, Topic_Details));
 		}
 		return findSub;
+	}
+
+	//delete subject
+	public void deleteSubject(Subject subjects) throws SQLException
+	{
+		Connection conn = mysqlDS.getConnection();
+		PreparedStatement myStmt = conn.prepareStatement("delete from subjects where id= ?");
+		myStmt.setString(1, subjects.getId());
+		myStmt.executeUpdate();
 	}
 
 	

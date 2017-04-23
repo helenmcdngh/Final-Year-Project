@@ -6,7 +6,6 @@ public class Topics
 {
 	//manages both subject_topics
 	// and topics tables
-	
 	private String subjectID;
 	private String topicID;
 	private String topicName;

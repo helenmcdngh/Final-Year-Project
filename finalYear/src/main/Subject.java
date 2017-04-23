@@ -1,9 +1,15 @@
 package main;
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 		
 @ManagedBean
-public class Subject
+public class Subject implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String name;
 	
@@ -15,7 +21,7 @@ public class Subject
 	}
 	public Subject()
 	{
-		//null constructor
+		
 	}
 	public String getId() 
 	{

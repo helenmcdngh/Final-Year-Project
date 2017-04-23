@@ -1,4 +1,5 @@
 package main;
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -9,7 +10,7 @@ import javax.faces.context.FacesContext;
 
 @ManagedBean
 @ViewScoped
-public class SubjectController 
+public class SubjectController implements Serializable
 {
 	private ArrayList<Subject> subjects;
 	DAO dao;
@@ -47,6 +48,22 @@ public class SubjectController
 		catch (Exception e) 
 		{
 			FacesMessage message =  new FacesMessage("Error: " + e);
+			FacesContext.getCurrentInstance().addMessage(null, message);
+			return e.toString();
+		}
+	}
+	
+	//delete subject
+	public String deleteSubject(Subject subjects) throws Exception
+	{
+		try
+		{
+			dao.deleteSubject(subjects);
+			return "subjects";
+		}
+		catch (Exception e) 
+		{
+			FacesMessage message = new FacesMessage("Error: " + e);
 			FacesContext.getCurrentInstance().addMessage(null, message);
 			return e.toString();
 		}
