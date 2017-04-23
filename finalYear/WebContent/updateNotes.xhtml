@@ -4,7 +4,7 @@
 	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-	<title>Update Subject Listing</title>
+	<title>Update Notes</title>
 	<meta charset="utf-8" />
   	<meta name="viewport" content="width=device-width, initial-scale=1" />
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -27,9 +27,25 @@
 	    </ul>
   		</div>
 	</nav>
-	
 	<h:form>
+		<br />
+		<h:message for="topicID" styleClass="errorMessage" />
+		Topic ID: <h:inputText  class="form-control form-control-lg" value="#{topics.topicID}" id="topicID" required="true" requiredMessage="Topic ID is needed here to update the notes"/>
+		<br />
+		<h:message styleClass="errorMessage" for="topicName"/> 
+		<br />
+      	Topic Name: <h:inputText  class="form-control form-control-lg" value="#{topics.topicName}" id="topicName"
+			p:placeholder="" />
+		<br />
 		
+		<h:message styleClass="errorMessage" for="details"/> 
+		<br />
+      	Details: <h:inputTextarea class="form-control form-control-lg" value="#{topics.details}" id="details"  cols="50" rows="10" p:placeholder=""/>
+		<br />
+		<br />
+		<br />
+		<h:commandButton value="Update"
+			action="#{topicController.updateTopic(topics)}" />
 	</h:form>
 	</div>
 	</div>

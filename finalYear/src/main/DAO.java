@@ -82,13 +82,22 @@ public class DAO
 	public void updateTopic(Topics topic) throws SQLException 
 	{
 		Connection conn = mysqlDS.getConnection();
-		PreparedStatement myStmt = conn.prepareStatement("update topics set topicID = ?, topicName = ?, details = ?");
+		PreparedStatement myStmt = conn.prepareStatement("update topics set topicID = ?, topicName = ?, details = ? where topicID = ?");
 		myStmt.setString(1, topic.getTopicID());	
 		myStmt.setString(2, topic.getTopicName());	
-		myStmt.setString(3, topic.getDetails());	
+		myStmt.setString(3, topic.getDetails());
+		myStmt.setString(4, topic.getTopicID());
 		myStmt.executeUpdate();
 		
 	}
+	
+	public void deleteTopic(Topics topic) throws SQLException
+	{
+		Connection conn = mysqlDS.getConnection();
+		PreparedStatement myStmt = conn.prepareStatement("delete from topics where topicID= ?");
+		myStmt.setString(1, topic.getTopicID());
+		myStmt.executeUpdate();
+	}	
 
 	public ArrayList<SubTopics> getSubTopicDetails() throws SQLException 
 	{
@@ -133,24 +142,7 @@ public class DAO
 			findSub.add(new FindAll(Sub_Name, Topic_ID, Topic_Name, Topic_Details));
 		}
 		return findSub;
-	}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
 
+	
 }

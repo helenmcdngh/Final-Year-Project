@@ -30,12 +30,12 @@ public class TopicController
 	{
 		return topic;
 	}
-
+	//load topic
 	public void loadTopics() throws Exception 
 	{
 		topic = dao.getTopicDetails();
 	}
-	
+	//update topic
 	public String updateTopic(Topics topic) throws Exception 
 	{
 		try 
@@ -50,7 +50,7 @@ public class TopicController
 			return e.toString();
 		}
 	}
-	
+	//add topic
 	public String addTopic(Topics topic) throws Exception
 	{
 		try
@@ -65,5 +65,21 @@ public class TopicController
 			return e.toString();
 		}
 	}
+	//delete topic
+	public String deleteTopic(Topics topic) throws Exception
+	{
+		try
+		{
+			dao.deleteTopic(topic);
+			return "topics";
+		}
+		catch (Exception e) 
+		{
+			FacesMessage message = new FacesMessage("Error: " + e);
+			FacesContext.getCurrentInstance().addMessage(null, message);
+			return e.toString();
+		}
+	}
+	
 	
 }
