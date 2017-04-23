@@ -36,6 +36,7 @@ public class SubjectController
 		subjects = dao.getSubjectDetails();
 	}
 	
+	//add subject
 	public String addSubject(Subject subjects) throws Exception
 	{
 		try

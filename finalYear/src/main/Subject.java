@@ -7,15 +7,15 @@ public class Subject
 	private String id;
 	private String name;
 	
-	public Subject()
-	{
-		//null constructor
-	}
 	//main constructor
 	public Subject(String id, String name)
 	{
 		this.id = id;
 		this.name = name;
+	}
+	public Subject()
+	{
+		//null constructor
 	}
 	public String getId() 
 	{

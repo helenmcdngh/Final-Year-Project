@@ -38,14 +38,18 @@ public class DAO
 	}
 	
 	//add a subject
-	public void addSubject(Subject subject) throws SQLException
+	/*public void addS(Topics topic) throws SQLException
 	{
 		Connection conn = mysqlDS.getConnection();
-		PreparedStatement myStmt = conn.prepareStatement("insert into subjects values(?,?)");
-		myStmt.setString(1, subject.getId());
-		myStmt.setString(2, subject.getName());
+		System.out.println(topic.toString());
+		//PreparedStatement myStmt = conn.prepareStatement("Insert into subject_topics values(?,?), topics values(?,?,?)");
+		PreparedStatement myStmt = conn.prepareStatement("insert into topics(topicID,topicName,details) values(?,?,?)");
+		myStmt.setString(1, topic.getTopicID());
+		myStmt.setString(2, topic.getTopicName());
+		myStmt.setString(3, topic.getDetails());
+		//System.out.println(myStmt);
 		myStmt.executeUpdate();
-	}
+	}*/
 	
 	//view topics\notes other
 	public ArrayList<Topics> getTopicDetails() throws Exception
@@ -123,6 +127,19 @@ public class DAO
 		myStmt.executeUpdate();
 	}
 	
+	//add Subject
+	public void addSubject(Subject subjects) throws SQLException
+	{
+		Connection conn = mysqlDS.getConnection();
+		PreparedStatement myStmt = conn.prepareStatement("Insert into subjects values (?,?)");
+		myStmt.setString(1, subjects.getId());
+		myStmt.setString(2, subjects.getName());
+		myStmt.executeUpdate();		
+	}
+
+	
+	
+	
 	//search for all notes in one subject
 	public ArrayList<FindAll> getFindSubject(FindAll search) throws SQLException 
 	{
@@ -144,5 +161,6 @@ public class DAO
 		return findSub;
 	}
 
+	
 	
 }

@@ -4,7 +4,7 @@
 	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-	<title>add Subject</title>
+	<title>Add Subjects</title>
 	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />  -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,37 +13,36 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </h:head>
 <h:body>
-
 <div class="container">
   <div class="jumbotron">
-	<h1>Add Subject</h1>
-	<nav class="navbar navbar-inverse">
+  <h1>Add Subjects</h1>
+  <BR />
+  <nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 		<div class="navbar-header">
 	    </div>
 	    <ul class="nav navbar-nav">
 	    	<li><a href="Index.xhtml">Home</a></li>
-	    	<li ><a href="subject_listing.xhtml"> Subject Listing</a></li>
+	    	<li ><a href="subtop.xhtml">Add Subject Topic ID</a></li>
+	    	<li ><a href="addNotes.xhtml">Add Notes</a></li>
 	    </ul>
   		</div>
 	</nav>
-	
+  <h4>How to add your notes, firstly create a Topic ID and assign it to the correct Subject ID. Now once you have the subject ID and Topic ID created, you can now add your notes to the system. Re-Enter the Topic ID from above.</h4>
 	<h:form>
 		<h:messages styleClass="errorMessage" globalOnly="true" />
-		<br />
 		<h:message for="id" styleClass="errorMessage" />
 		<br />
-      	Subject ID: <h:inputText value="#{subject.id}" class="form-control form-control-lg" id="id" p:placeholder="" required="true" requiredMessage="Subject ID is needed, please enter here" />
+      	Subject ID: <h:inputText class="form-control form-control-lg" value="#{subjects.id}" id="id" p:placeholder="" required="true" requiredMessage="subject ID is needed" />
 		<br />
-		<h:message for="name"/> 
+		<h:message  for="name"/> 
 		<br />
-      	Subject Name: <h:inputText value="#{subject.name}" class="form-control form-control-lg" id="name" p:placeholder="" />
+      	Subject Name: <h:inputText class="form-control form-control-lg" value="#{subjects.name}" id="name" p:placeholder=""/>
+		<br />
+		<h:commandButton value="Add" action="#{subjectController.addSubject(subjects)}" />
 		<br />
 		<br />
-		<h:commandButton value="Add Subject" action="#{subjectController.addSubject(subjects)}" />
-		<br /> 
 	</h:form>
-	
 	</div>
 	</div>
 </h:body>
