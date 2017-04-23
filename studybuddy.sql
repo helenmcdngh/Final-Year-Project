@@ -45,6 +45,8 @@ INSERT INTO `subjects` (`id`, `name`) VALUES
 (3, 'Science'),
 (4, 'Home Economics');
 
+insert into subjects values (5,"English"),(6,"Technology"),(7,"French"),(8,"German"),(9,"Irish"),(10,"Business Studies"),(11,"Wood Work"),(12,"Engineering"),(13,"Music"),(14,"DCG");
+
 -- --------------------------------------------------------
 
 --
