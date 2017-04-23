@@ -17,6 +17,17 @@
   <div class="jumbotron">
   <h1>Add Notes</h1>
   <BR />
+  <nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		<div class="navbar-header">
+	    </div>
+	    <ul class="nav navbar-nav">
+	    	<li><a href="Index.xhtml">Home</a></li>
+	    	<li ><a href="Notes.xhtml">Notes</a></li>
+	    	<li ><a href="updateNotes.xhtml">Update Notes</a></li>
+	    </ul>
+  		</div>
+	</nav>
   <h4>How to add your notes, firstly create a Topic ID and assign it to the correct Subject ID. Now once you have the subject ID and Topic ID created, you can now add your notes to the system. Re-Enter the Topic ID from above.</h4>
 	<h:form>
 		<h:messages styleClass="errorMessage" globalOnly="true" />
@@ -28,6 +39,7 @@
 		<br />
       	Topic ID <h:inputText class="form-control form-control-lg" value="#{subTopics.topID}" id="topID" p:placeholder="" required="true" requiredMessage="Topic ID is needed" />
 		<br />
+		<h:commandButton value="Add" action="#{subTopicController.addSubTopics(subTopics)}" />
 		<br />
 		<h:message for="topicID" styleClass="errorMessage" />
 		<br />
@@ -41,14 +53,10 @@
 		<br />
 		Details <h:inputTextarea class="form-control form-control-lg" value="#{topics.details}" id="details"  cols="50" rows="10" p:placeholder=""/>
 		<br />
-		<h:commandButton value="Click me first" action="#{topicController.addTopic(topics)}">
-			<span class="glyphicon glyphicon-search"/>
-		</h:commandButton>
-		<h:commandButton value="Click me seconds" action="#{subTopicController.addSubTopics(subTopics)}" />
+		
+		<h:commandButton value="Add" action="#{topicController.addTopic(topics)}" />
 		<br />
 		<br />
-		<a href="Index.xhtml">Home</a>
-		<a href="Notes.xhtml">  Return to Notes</a> 
 	</h:form>
 	</div>
 	</div>

@@ -18,11 +18,24 @@
 <h:body>
 	<div class="container">
   	<div class="jumbotron">	
-	<a href="addSubject.xhtml">Add Subjects here</a>	
+  	
+  	
+  	<h1>Subject Listing</h1>
+  	
+  	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		<div class="navbar-header">
+	    </div>
+	    <ul class="nav navbar-nav">
+	    	<li><a href="Index.xhtml">Home</a></li>
+	    	<li ><a href="addSubject.xhtml">Add Subjects here</a></li>
+	    </ul>
+  		</div>
+	</nav>
+  	
 	<h:dataTable value="#{subjectController.subjects}" var="subjects" border="1"
-				styleClass="employeeTable"
-				headerClass="employeeTableHeader"
-				rowClasses="employeeTableOddRow,employeeTableEvenRow">
+				styleClass="table table-hover"
+				headerClass="info">
 		<h:column>
 			<f:facet name="header">Subject ID</f:facet>
 			#{subjects.id}
@@ -31,13 +44,7 @@
 			<f:facet name="header">Subject Name</f:facet>
 			#{subjects.name}
 		</h:column>
-		<h:column>
-			<f:facet name="header">Action</f:facet>
-			 <a href="updateSubject.xhtml">Update</a><br />
-			 <!-- <h:commandButton action = "#{manufacturerController.deleteManufacturer(n)}" value = "Delete" onclick = "return confirm('Delete this manufacturer?')" />  -->
-		</h:column>
 	</h:dataTable>
-	<a href="Index.xhtml">Home</a>
 	</div>
 	</div>
 </h:body>

@@ -18,11 +18,23 @@
 <h:body>
 	<div class="container">
   	<div class="jumbotron">
-	<a href="addNotes.xhtml">Add Notes here</a>	
+	
 	<h1>Notes</h1>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		<div class="navbar-header">
+	    </div>
+	    <ul class="nav navbar-nav">
+		    <li ><a href="Index.xhtml">Home</a></li>
+	    	<li><a href="addNotes.xhtml">Add Notes</a></li>
+	    	<li ><a href="updateNotes.xhtml">Update Notes</a></li>
+	    </ul>
+  		</div>
+	</nav>
+	
 	<h:dataTable value="#{topicController.topics}" class="table table-hover" var="top" border="1"
-					headerClass="warning"
-					rowClasses="success">
+					headerClass="info"
+					rowClasses="default">
 		<h:column>
 			<f:facet name="header">Subject ID</f:facet>
 			#{top.subjectID}
@@ -39,13 +51,7 @@
 			<f:facet name="header">details</f:facet>
 			#{top.details}
 		</h:column>
-		<h:column>
-			<f:facet name="header">Action</f:facet>
-			 <a href="updateNotes.xhtml">Update</a><br />
-			 <!-- <h:commandButton action = "#{manufacturerController.deleteManufacturer(n)}" value = "Delete" onclick = "return confirm('Delete this manufacturer?')" />  -->
-		</h:column>
 	</h:dataTable>
-	<a href="Index.xhtml">Home</a>
 	</div>
 	</div>	
 	</h:body>
