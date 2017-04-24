@@ -42,7 +42,8 @@ public class DAO
 	{
 		ArrayList<Topics> topics = new ArrayList<>();
 		Connection conn = mysqlDS.getConnection();
-		PreparedStatement myStmt = conn.prepareStatement("select s.subjectID, s.topicID, t.topicName, t.details from subject_topics s join topics t on s.topicID = t.topicID");
+		PreparedStatement myStmt = conn.prepareStatement("select s.subjectID, s.topicID, t.topicName, t.details "
+				+ "from subject_topics s join topics t on s.topicID = t.topicID");
 		ResultSet rs = myStmt.executeQuery();
 		while (rs.next())
 		{
