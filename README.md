@@ -19,7 +19,7 @@ Conclusion
 
 References
 
-## Introduction
+# Introduction
 My intention for my final year project was to create a Note Storing System for secondary level students so they could have all their notes all in one place, I want to use eclipse to make a JSF style project written in java with a SQL database to store all the data. I had intended to allow students add images, diagrams and to search through the database for their notes. There is a list of all subjects that the student can use and then develop the notes from then on.
 
 I have some understanding of JSF but I think I should develop it a bit more to do my project. I am used to java is has been one of my core languages for the last three years, and SQL. This project has helped me develop SQL queries and how to build a database. The database that I am using I created myself, and it will be stored locally on the machine. I am using apache tomcat for a server to show the application on localhost.
@@ -27,7 +27,7 @@ The information will be stored in a SQL database and kept, the database is the k
 
 When I finish this project, I expect to have better understanding of JSF and SQL. My Final finish application gives you a listing of all subjects in the database, allows you to create, read, update and delete notes from the system. Also provides extra information for exam preparation, learning through other means.
 
-## Project Idea and Research
+# Project Idea and Research
 
 My idea for this project came from seeing and experiencing the problem with studying and writing out notes and losing paper, mainly not being organized enough. I asked my Supervisor about this idea, within a meeting we designed the structure of the database and how everything should be link throughout the tables within the database. Within a couple of days, I created the database and named it studybuddy.
 
@@ -37,7 +37,7 @@ I designed this project as a single-user system for one user at a time, all they
 
 The application produces a webpage in eclipse, which then you can copy the link and paste it into any web browser. It will the show you the homepage which then allows you to navigate throughout the other pages. This project will not need any static or dynamic software updates for any aspects of it. This project is to help students with their studies and help them concentrate. 
 
-## Technology Used 
+# Technology Used 
 The technology I used in my project are the following:
 * Java\ Eclipse
 * SQL \ wampserver
@@ -94,7 +94,7 @@ I connected the subjects table by id to the subject_topics table by subjectid. T
 
 The database overall is quite simply design so anyone can read it and understand what it’s actually purpose is. I choose to use mysql because I understand how it works.
 
-## User Guide
+# User Guide
 #### Installation
 First, download [WampServer](http://www.wampserver.com/en/) from the website. It will contain new version of apache, php and mysql. Then wait for it to finish downloading. Then click on the executable file and run it, follow the setup instructions and wait. Once it has finished installing start wamp, a small little icon W will appear in lower right hand side of the toolbar. Wait for it to turn green, left click it and select MySQL\MySQL console. Open in notepad StudyBuddy.sql file in the GitHub repository, copy all the text and paste it into the console command line and press enter. Now once you have that done, go to [Tomcat](https://tomcat.apache.org/download-90.cgi) and download the 32-bit/64-bit Windows Service Installer, 9.0.0.M10. Select type of Installation Normal, click Next, click next on the Configuration Options screen, set the JRE (Java Runtime Environment) Path e.g. C:\Program Files\Java\jre1.8.0_101 and click next and finally click Install.
 
@@ -147,23 +147,29 @@ This page contains links to the examinations website which has all the exam pape
 
 ![moreinformation](https://cloud.githubusercontent.com/assets/15608152/25385413/d98ce748-29bb-11e7-9ed3-a5aee449c43e.PNG)
 
-## Development Methodology
+# Development Methodology
 Throughout this project I used Oracle MySQL documentation to help me figure out the best way to connect the tables in the database together. I wanted to make this project into Graphical User Interface\GUI application at the beginning but a JSF web application was a more logical and cleaner design to use. 
 [Documentation of mySQL](https://dev.mysql.com/doc/refman/5.7/en/introduction.html)
 
-## Limitations and Known Bugs
+# Limitations and Known Bugs
 There are no major disadvantages to using JSF, it is very easy to style and it supports html, html5 but everyone still uses xhtml. Xhtml is a hypertext mark-up language and is part of the xml family. The projects minor limitation is that sometimes it is very slow to run and cuts out.
 
-## Conclusion
+# Conclusion
 I wanted to test myself,
+
 What\why I decide to make first,
+
 What didn’t work
+
 What I learned
+
 What would you have changed about the project
+
 What its purpose is-market place, is it ready, study/learning tool
+
 Why I built it the way I did
 
-## References
+# References
 1. [MySQL Documentation]( https://dev.mysql.com/doc/refman/5.7/en/introduction.html)
 2. [Eclipse]( https://eclipse.org/downloads/eclipse-packages/)
 3. [Tomcat]( https://tomcat.apache.org/download-90.cgi)
