@@ -155,19 +155,14 @@ Throughout this project I used Oracle MySQL documentation to help me figure out 
 There are no major disadvantages to using JSF, it is very easy to style and it supports html, html5 but everyone still uses xhtml. Xhtml is a hypertext mark-up language and is part of the xml family. The projects minor limitation is that sometimes it is very slow to run and cuts out.
 
 # Conclusion
-I wanted to test myself,
+The reason I chose to create this web application, I wanted to make an app that would help secondary school students who struggle with studying, who lose track of what they are doing. So, this is the main reason that all the notes are on one page. When I decided to build this application in JSF, I only knew the basic workings of it. So, I began looking into it. The reason I decided to make it in the form of a jsf web application is because I had previous work on it in a previous module.
 
-What\why I decide to make first,
+What I learned from this project, that it is very dependent on the java layer so that it can access, read from the Database. The java layer controls all the activity that goes on in the application. The xhtml pages are simply to display, take in, update and delete values in the database which is all controlled by the java files. I researched how to create a database and it was quite easy, I can now develop and manage this database.
 
-What didn’t work
+I ran into a few problems with trying to add and display images on the web page from a table in the database, it kept returning a null exception. So, as I began to research how to go about correcting it, the page began to display the binary form of the image. No matter what I changed it would still only output the binary form, so I had no choice only to remove it from the project and to drop the table in the SQL database. I then began to research how to search for all notes assigned to a single subject, it didn’t go well so I didn’t proceed with it anymore. 
 
-What I learned
-
-What would you have changed about the project
-
-What its purpose is-market place, is it ready, study/learning tool
-
-Why I built it the way I did
+If I could enhance this project in any way I would have added a login feature to allow more than one user to store notes on this system. At the begin of the project I had intended this project for a single user to use it at any given time. If I had to use another language to write it in, I would write it in Ionic which is a mobile app framework, it is built on top of angularJS and Apache Cordova and has tools and services for developing web technologies like CSS, HTML5 and Sass. Depending on the databases, I have used mysqlite briefly with ionic with another project. I would still have use MySQL to store my information to a database.  
+Taking the general project, I believe I have learned a lot and gained a great deal from this project, it is a handy learning and study tool. It is not quite ready for the store. 
 
 # References
 1. [MySQL Documentation]( https://dev.mysql.com/doc/refman/5.7/en/introduction.html)
