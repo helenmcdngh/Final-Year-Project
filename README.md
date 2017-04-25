@@ -109,35 +109,43 @@ When everything is installed, imported and created correctly you can run the app
 #### How to Use Application
 ##### Homepage
 The homepage is the navigation tool to go through the main pages of the project. Here are the mains of the Application.
-Homepage image
+
+![homepage](https://cloud.githubusercontent.com/assets/15608152/25385407/d96f148e-29bb-11e7-9495-95f19a598ece.PNG)
 
 ##### Subject Listing
 Displays all the subjects that are stored in the database.
-Subject image
+
+![subjectlisting](https://cloud.githubusercontent.com/assets/15608152/25385412/d9881312-29bb-11e7-8037-388ff60875c4.PNG)
 
 ##### Notes
 The Notes page displays all the notes in the database and they are ordered in numerical order by Subject ID. You can navigate through the pages here to add Subject topic id, notes, update and delete notes as well. Click on Add Subject Topic to begin.
-Notes image
+
+![notes](https://cloud.githubusercontent.com/assets/15608152/25385408/d9874630-29bb-11e7-9aa0-66774c9d1cb1.PNG)
 
 ##### Add Subject Topic ID
 First insert the subject id you wish to assign to subject, then create topic id. Then Click add, now move onto add Notes but remember the topic id you created.
-Add Subject Topic ID image
+
+![addsubtop](https://cloud.githubusercontent.com/assets/15608152/25385409/d987a65c-29bb-11e7-892a-20273afcc0c5.PNG)
 
 ##### Add Notes
 Now re-enter the topic id you created in the previous page. Enter the name of the topic and content of the topic you wish to create and click add. Now return to the Notes page and it has been added to the table in the database.
-Add Notes image
+
+![addnotes](https://cloud.githubusercontent.com/assets/15608152/25385411/d988d176-29bb-11e7-968d-1b21a3b3e5ec.PNG)
 
 ##### Update Notes
 To update your notes, you must look for the topic id of which note you wish to change. Enter the selected id, you can now change the name and details of the topic. When your finished all you should do is execute it by clicking update.
-Update Notes image
+
+![updatenotes](https://cloud.githubusercontent.com/assets/15608152/25385410/d9885926-29bb-11e7-83f7-53351905695d.PNG)
 
 ##### Delete Notes
 Deleting notes are very easy, find the topic id of which note\topic you wish to delete. Enter the id and execute it by clicking delete, now return to your notes its gone, never to be seen again.
-Delete Notes image
+
+![deletenotes](https://cloud.githubusercontent.com/assets/15608152/25385406/d94fb8d2-29bb-11e7-8e29-68ade61869de.PNG)
 
 ##### More Information
 This page contains links to the examinations website which has all the exam papers for every subject in the curriculum for both junior and leaving certificate students. StudyNote has a lot of information on a huge number of common subjects for both levels. The History channel and National Geographic have an enormous amount of information in written and video Documentaries. 
-More Info image
+
+![moreinformation](https://cloud.githubusercontent.com/assets/15608152/25385413/d98ce748-29bb-11e7-9ed3-a5aee449c43e.PNG)
 
 ## Development Methodology
 Throughout this project I used Oracle MySQL documentation to help me figure out the best way to connect the tables in the database together. I wanted to make this project into Graphical User Interface\GUI application at the beginning but a JSF web application was a more logical and cleaner design to use. 
